@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ua">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Вибір квитку</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="ticket.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="ticket.css">
+    </head>
+    <body>
+        <!-- Шапка -->
+        <div class="page-header">
+            <div class="left-block">
+                <img class="menu-left" onclick="mySecondFunction()" src="../img/menu.svg" alt="">
+
+                <div class="logo-container">
+                    <p class="title">Cinematic</p>
+                </div>
+            </div>
+
+            <div class="right-block">
+                <div id="1" class="cinema">
+                    <div class="cinema-name">
+                        <p>4 Matic Plaza, Одеса</p>
+                    </div>
+                    <div class="cinema-list" onclick="myFunction()"><img src="../img/arrow.svg" alt=""></div>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="#">4 Matic Plaza,Одеса</a>
+                        <a href="#">3 Matic Plaza,Одеса</a>
+                        <a href="#">2 Matic Plaza,Одеса</a>
+                    </div>
+                </div>
+
+                <div class="account">
+                    <div class="enter">
+                        <p>Увійти</p>
+                    </div>
+                    <div class="account-icon"><img src="../img/user.svg" alt=""></div>
+
+                </div>
+                <!-- <img class="end" src="img/menu.svg" alt=""> -->
+
+
+            </div>
+
+        </div>
+        <!--  -->
+
+        <!-- Меню -->
+        <div class="dropoverlay" onclick="deleteDropLeft()"></div>
+
+        <div class="dropleft">
+            <div class="dropleft-header">
+                <img onclick="deleteDropLeft()" src="../img/cancel.png" alt="">
+                <div class="languages">
+                    <p class="ru">RU</p>
+                    <p class="ua">UA</p>
+                </div>
+            </div>
+
+            <div class="dropleft-content">
+                <div class="logo">
+                    <img src="../img/logo.png" alt="">
+                </div>
+
+                <div class="inner-list">
+                    <a href="">Зараз у кіно</a>
+                    <a href="">Скоро у прокаті</a>
+                    <a href="">Кінотеатри</a>
+                    <a href="">Про компанію</a>
+                </div>
+
+                <div class="cabinet">
+                    <p>Особистий кабінет</p>
+                    <img src="../img/cabinet.svg" alt="">
+                </div>
+
+            </div>
+
+            <div class="dropleft-footer">
+                <p>Служба підтримки</p>
+                <div class="telephone">
+                    <img src="../img/phone.svg" alt="">
+                    <p>0 800 300 600</p>
+                </div>
+                <p>
+                    Ми в соціальних мережах</p>
+                <div class="networks">
+                    <img src="../img/facebook.svg" alt="">
+                    <img src="../img/viber.svg" alt="">
+                    <img src="../img/instagram.svg" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Конец меню -->
+
+        <!-- <p id="film-path">Cinematic > Фільми > Веном 2: Карнаж</p> -->
+        <p id="film-path">Місця > Оплата > Замовлення</p>
+
+        <p id="film-name">Веном 2: Карнаж</p>
+        <img src="../img/venom-ua.jpg" alt="poster" id="poster" width="275px" height="406px">
+        <table class="ticket-info">
+            <tr>
+                <td><img src="../img/ticket-place.png" alt="" id="ticket-place"></td>
+                <td>Одеса, ТРЦ "Gagarin Plaza" Зал №3</td>
+            </tr>
+            <tr>
+                <td><img src="../img/ticket-day.png" alt="" id="ticket-day"></td>
+                <td>25.10.2021 Понеділок</td>
+            </tr>
+            <tr>
+                <td><img src="../img/ticket-time.png" alt="" id="ticket-time"></td>
+                <td>Час 16:50-18:28</td>
+            </tr>
+        </table>
+
+        <div class="cinema-hall">
+            <svg width="576" height="43" viewbox="0 0 576 43" fill="none" xmlns="http://www.w3.org/2000/svg" class="ekran-svg">
+                <path d="M266.214 36.038V38H256.764V25.4H265.962V27.362H259.104V30.638H265.188V32.564H259.104V36.038H266.214ZM273.467 32.69H271.127V38H268.823V25.4H271.127V30.674H273.539L277.157 25.4H279.641L275.339 31.502L279.803 38H277.157L273.467 32.69ZM286.575 25.4C287.667 25.4 288.615 25.58 289.419 25.94C290.235 26.3 290.859 26.816 291.291 27.488C291.723 28.16 291.939 28.958 291.939 29.882C291.939 30.794 291.723 31.592 291.291 32.276C290.859 32.948 290.235 33.464 289.419 33.824C288.615 34.184 287.667 34.364 286.575 34.364H283.731V38H281.391V25.4H286.575ZM286.467 32.384C287.487 32.384 288.261 32.168 288.789 31.736C289.317 31.304 289.581 30.686 289.581 29.882C289.581 29.078 289.317 28.46 288.789 28.028C288.261 27.596 287.487 27.38 286.467 27.38H283.731V32.384H286.467ZM301.872 35.084H295.572L294.33 38H291.918L297.588 25.4H299.892L305.58 38H303.132L301.872 35.084ZM301.098 33.248L298.722 27.74L296.364 33.248H301.098ZM318.708 25.4V38H316.368V32.6H309.852V38H307.512V25.4H309.852V30.602H316.368V25.4H318.708Z" fill="white"/>
+                <path d="M1 13C54.7817 9.33333 187.941 2 290.323 2C392.705 2 522.767 9.33333 575 13" stroke="white" stroke-width="3.5"/>
+            </svg>
+
+            <table class="place-choose">
+                <tr>
+                    <td></td>
+                    <TD></TD>
+                    <td></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="1" start="1"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="1" start="2"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="1" start="3"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="1" start="4"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="1" start="5"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="1" start="6"></td>
+                    <td class="grey" data-toggle="tooltip" title="Місце зайняте" id="1" start="7"><img src="../img/td-cross.png" alt="" class="td-cross"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="1" start="8"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="1" start="9"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="1" start="10"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="1" start="11"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="1" start="12"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="1"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="2"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="3"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="4"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="5"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="6"></td>
+                    <td class="grey" data-toggle="tooltip" title="Місце зайняте" id="2" start="7"><img src="../img/td-cross.png" alt="" class="td-cross"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="8"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="9"></td>
+                    <td class="grey" data-toggle="tooltip" title="Місце зайняте" id="2" start="10"><img src="../img/td-cross.png" alt="" class="td-cross"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="11"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="12"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="13"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="14"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="15"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="2" start="16"></td>
+                </tr>
+                <tr style="padding-left: 5px;">
+
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="1"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="2"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="3"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="4"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="5"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="6"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="7"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="8"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="9"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="10"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="11"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="12"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="13"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="14"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="15"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="16"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="17"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="3" start="18"></td>
+                </tr>
+                <tr>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="1"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="2"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="3"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="4"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="5"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="6"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="7"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="8"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="9"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="10"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="11"></td>
+                    <td class="grey" data-toggle="tooltip" title="Місце зайняте" id="4" start="12"><img src="../img/td-cross.png" alt="" class="td-cross"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="13"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="14"></td>
+                    <td class="grey" data-toggle="tooltip" title="Місце зайняте" id="4" start="15"><img src="../img/td-cross.png" alt="" class="td-cross"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="16"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="17"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="4" start="18"></td>
+                </tr>
+                <tr>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="1"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="2"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="3"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="4"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="5"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="6"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="7"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="8"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="9"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="10"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="11"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="12"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="13"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="14"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="15"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="16"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="17"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="5" start="18"></td>
+                </tr>
+                <tr>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="1"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="2"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="3"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="4"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="5"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="6"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="7"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="8"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="9"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="10"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="11"></td>
+                    <td class="grey" data-toggle="tooltip" title="Місце зайняте" id="6" start="12"><img src="../img/td-cross.png" alt="" class="td-cross"></td>
+                    <td class="grey" data-toggle="tooltip" title="Місце зайняте" id="6" start="13"><img src="../img/td-cross.png" alt="" class="td-cross"></td>
+                    <td class="grey" data-toggle="tooltip" title="Місце зайняте" id="6" start="14"><img src="../img/td-cross.png" alt="" class="td-cross"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="15"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="16"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="17"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="6" start="18"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <TD></TD>
+                    <td></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="1"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="2"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="3"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="4"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="5"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="6"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="7"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="8"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="9"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="10"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="11"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="7" start="12"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <TD></TD>
+                    <td></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="1"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="2"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="3"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="4"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="5"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="6"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="7"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="8"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="9"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="10"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="11"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="8" start="12"></td>
+                </tr>
+                <tr>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="1"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="2"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="3"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="4"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="5"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="6"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="7"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="8"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="9"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="10"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="11"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="12"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="13"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="14"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="15"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="16"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="17"></td>
+                    <td class="place-box" data-toggle="tooltip" title="90 грн." id="9" start="18"></td>
+                </tr>
+            </table>
+        </div>
+        <div
+            class="chosen-tickets">
+            <!-- <p class="text-center online-text">З онлайн квитком одразу в зал! <br> Друкувати не потрібно! </p> -->
+            <p class="online-text">Квитки</p>
+            <div class="here"></div>
+            <!-- <div class="place-pay">
+                                                <p class="row">1 ряд</p>
+                                                <p class="place">7 місце</p>
+                                                <p class="place-price">90 грн</p>
+                                                <img src="../img/ticket-cross.png" alt="close" class="ticket-cross">
+                                            </div> -->
+            <p class="pay">Всього до сплати</p>
+            <p class="pay-sum">0 грн</p>
+            <a href="#" class="continue">Продовжити</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- <title>Веном 2 - про фільм</title> -->
+        <title>Venom page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="film.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="film.css">
+    </head>
+    <body>
+        <!-- Шапка -->
+        <div class="page-header">
+            <div class="left-block">
+                <img class="menu-left" onclick="mySecondFunction()" src="../img/menu.svg" alt="">
+
+                <div class="logo-container">
+                    <p class="title">Cinematic</p>
+                </div>
+            </div>
+
+            <div class="right-block">
+                <div id="1" class="cinema">
+                    <div class="cinema-name">
+                        <p>4 Matic Plaza, Одеса</p>
+                    </div>
+                    <div class="cinema-list" onclick="myFunction()"><img src="../img/arrow.svg" alt=""></div>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="#">4 Matic Plaza,Одеса</a>
+                        <a href="#">3 Matic Plaza,Одеса</a>
+                        <a href="#">2 Matic Plaza,Одеса</a>
+                    </div>
+                </div>
+
+                <div class="account">
+                    <div class="enter">
+                        <p>Увійти</p>
+                    </div>
+                    <div class="account-icon"><img src="../img/user.svg" alt=""></div>
+
+                </div>
+                <!-- <img class="end" src="img/menu.svg" alt=""> -->
+
+
+            </div>
+
+        </div>
+        <!--  -->
+
+        <!-- Меню -->
+        <div class="dropoverlay" onclick="deleteDropLeft()"></div>
+
+        <div class="dropleft">
+            <div class="dropleft-header">
+                <img onclick="deleteDropLeft()" src="../img/cancel.png" alt="">
+                <div class="languages">
+                    <p class="ru">RU</p>
+                    <p class="ua">UA</p>
+                </div>
+            </div>
+
+            <div class="dropleft-content">
+                <div class="logo">
+                    <img src="../img/logo.png" alt="">
+                </div>
+
+                <div class="inner-list">
+                    <a href="">Зараз у кіно</a>
+                    <a href="">Скоро у прокаті</a>
+                    <a href="">Кінотеатри</a>
+                    <a href="">Про компанію</a>
+                </div>
+
+                <div class="cabinet">
+                    <p>Особистий кабінет</p>
+                    <img src="../img/cabinet.svg" alt="">
+                </div>
+
+            </div>
+
+            <div class="dropleft-footer">
+                <p>Служба підтримки</p>
+                <div class="telephone">
+                    <img src="../img/phone.svg" alt="">
+                    <p>0 800 300 600</p>
+                </div>
+                <p>
+                    Ми в соціальних мережах</p>
+                <div class="networks">
+                    <img src="../img/facebook.svg" alt="">
+                    <img src="../img/viber.svg" alt="">
+                    <img src="../img/instagram.svg" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Конец меню -->
+
+        <p id="film-path">Cinematic > Фільми > Веном 2: Карнаж</p>
+        <p id="film-name">Веном 2: Карнаж</p>
+        <img src="venom-ua.jpg" alt="poster" id="poster" width="275px" height="406px">
+        <a href="https://www.youtube.com/watch?v=KGiy32SVOBw&ab_channel=%D0%A2%D0%B5%D0%BB%D0%B5%D0%BA%D0%B0%D0%BD%D0%B0%D0%BBICTV" class="trailer">Дивитись трейлер</a>
+        <img src="../img/trailer.png" alt="" class="trailer-img" width="13px" height="17px">
+
+        <!-- <div class="like-circle"><img src="../img/like.png" alt="like" class="like"></div> -->
+        <!-- <div class="dislike-circle"><img src="../img/dislike.png" alt="dislike" width="40px" height="40px" class="dislike"></div> -->
+        <img src="../img/like.png" alt="like" class="like"> <img src="../img/dislike.png" alt="" class="dislike">
+        <p class="like-num">97</p>
+        <p class="dislike-num">34</p>
+
+        <table id="film-info" class="col-md-4 col-md-8 col-sm-8 col-lg-8 col-sm-4 col-sm-6">
+            <tr>
+                <td class="col1">Вік:</td>
+                <td class="col2">16 +</td>
+            </tr>
+            <tr>
+                <td class="col1">Рік:</td>
+                <td class="col2">2021</td>
+            </tr>
+            <tr>
+                <td class="col1">Оригінальна назва:</td>
+                <td class="col2">Venom: Let there be Carnage</td>
+            </tr>
+            <tr>
+                <td class="col1">Режисер:</td>
+                <td class="col2">Енді Серкіс</td>
+            </tr>
+            <tr>
+                <td class="col1">Період прокату:</td>
+                <td class="col2">08.10.2021 - 17.11.2021</td>
+            </tr>
+            <tr>
+                <td class="col1">Рейтинг Imdb:</td>
+                <td class="col2">6.6</td>
+            </tr>
+            <tr>
+                <td class="col1">Мова:</td>
+                <td class="col2">Українська</td>
+            </tr>
+            <tr>
+                <td class="col1">Жанр:</td>
+                <td class="col2">Фантастика, Екшн, Бойовик, Трилер</td>
+            </tr>
+            <tr>
+                <td class="col1">Тривалість:</td>
+                <td class="col2">1:38</td>
+            </tr>
+            <tr>
+                <td class="col1">Виробництво:</td>
+                <td class="col2">США</td>
+            </tr>
+            <tr>
+                <td class="col1">Студія:</td>
+                <td class="col2">Sony</td>
+            </tr>
+            <tr>
+                <td class="col1">Сценарій:</td>
+                <td class="col2">Келлі Марсел</td>
+            </tr>
+            <tr>
+                <td class="col1">У головних ролях:</td>
+                <td class="col2">Том Харді, Келлі Марсел</td>
+            </tr>
+        </table>
+        <button class="time-button">Розклад</button>
+
+
+            <p class="description col-sm-8">
+                Едді Брок (Том Харді) змушений протистояти Клетусу Кессіді (Вуді Гаррельсон). Серійний вбивця та маніяк став ще небезпечнішим, бо об’єднався зі ще одним інопланетним симбіотом. Тепер він являє собою монстра, єдина мета якого вбивати та калічити людей.
+                                        Фантастичний бойовик «Веном 2: Карнаж» є продовженням однойменного фільму, що вийшов на екрани у 2018 році. У основі сюжету – комікси Marvel Comics, в яких персонаж вперше з’явився у 1984 році. Про плани зняти продовження стрічки йшлося ще під час зйомок першої частини.
+
+
+            </p>
+
+
+
+
+        <div class="timetable-xs">
+            <div class="timetable-1">
+                <p class="timetable-text text-center">Розклад сеансів</p>
+                <img src="../img/cancel.png" alt="close" class="time-cross">
+                <!-- <div class="dropdown">
+                                                <button type="button" class="dropdown-button" data-toggle="dropdown">
+                                                  Пн, 11 жовтня         Сьогодні
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                  <a class="dropdown-item" href="#">12 жовтня</a>
+                                                  <a class="dropdown-item" href="#">13 жовтня</a>
+                                                  <a class="dropdown-item" href="#">14 жовтня</a>
+                                                </div>
+                                            </div> -->
+
+                <div class="time-drop time-drop-xs" onclick="rotate()">
+                    <p style="padding-top: 7px;">Пн, 11 жовтня</p>
+                    <img src="../img/arrow.svg" alt="arrow" height="20px" width="20px" class="time-arrow ">
+                </div>
+                <div class="dates dates-xs">
+                    <a href="#">Вт, 15 жовтня</a><br><br>
+                    <a href="#">Ср, 16 жовтня</a><br><br>
+                    <a href="#">Чт, 17 жовтня</a><br><br>
+                    <a href="#">Пт, 18 жовтня</a><br><br>
+                    <a href="#">Сб, 19 жовтня</a><br><br>
+                </div>
+            </div>
+            <div class="times">
+                <p class="c-c">City Center</p>
+                <table class="times-table">
+
+                    <tr>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="95грн">10:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="95грн">11:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="95грн">12:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">13:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">14:40</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">15:40</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">16:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="165грн">17:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="165грн">18:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="190грн">19:40</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="190грн">20:10</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="215грн">21:10</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="215грн">22:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="215грн">23:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="250грн">24:40</a>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="timetable">
+            <div class="timetable-1">
+                <p class="timetable-text">Розклад сеансів</p>
+                <!-- <div class="dropdown">
+                                                <button type="button" class="dropdown-button" data-toggle="dropdown">
+                                                  Пн, 11 жовтня         Сьогодні
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                  <a class="dropdown-item" href="#">12 жовтня</a>
+                                                  <a class="dropdown-item" href="#">13 жовтня</a>
+                                                  <a class="dropdown-item" href="#">14 жовтня</a>
+                                                </div>
+                                            </div> -->
+
+                <div class="time-drop" onclick="rotate()">
+                    <p style="padding-top: 7px;">Пн, 11 жовтня</p>
+                    <img src="../img/arrow.svg" alt="arrow" height="20px" width="20px" class="time-arrow ">
+                </div>
+                <div class="dates">
+                    <a href="#">Вт, 15 жовтня</a><br><br>
+                    <a href="#">Ср, 16 жовтня</a><br><br>
+                    <a href="#">Чт, 17 жовтня</a><br><br>
+                    <a href="#">Пт, 18 жовтня</a><br><br>
+                    <a href="#">Сб, 19 жовтня</a><br><br>
+                </div>
+            </div>
+            <div class="times">
+                <p class="c-c">City Center</p>
+                <table class="times-table">
+
+                    <tr>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="95грн">10:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="95грн">11:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="95грн">12:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">13:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">14:40</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">15:40</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">16:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="165грн">17:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="165грн">18:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="190грн">19:40</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="190грн">20:10</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="215грн">21:10</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="215грн">22:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="215грн">23:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="250грн">24:40</a>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="timetable-sm">
+            <div class="timetable-1">
+                <p class="timetable-text text-center">Розклад сеансів</p>
+                <!-- <div class="dropdown">
+                                                <button type="button" class="dropdown-button" data-toggle="dropdown">
+                                                  Пн, 11 жовтня         Сьогодні
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                  <a class="dropdown-item" href="#">12 жовтня</a>
+                                                  <a class="dropdown-item" href="#">13 жовтня</a>
+                                                  <a class="dropdown-item" href="#">14 жовтня</a>
+                                                </div>
+                                            </div> -->
+
+                <div class="time-drop time-drop-sm" onclick="rotate()">
+                    <p style="padding-top: 7px;">Пн, 11 жовтня</p>
+                    <img src="../img/arrow.svg" alt="arrow" height="20px" width="20px" class="time-arrow ">
+                </div>
+                <div class="dates dates-sm">
+                    <a href="#">Вт, 15 жовтня</a><br><br>
+                    <a href="#">Ср, 16 жовтня</a><br><br>
+                    <a href="#">Чт, 17 жовтня</a><br><br>
+                    <a href="#">Пт, 18 жовтня</a><br><br>
+                    <a href="#">Сб, 19 жовтня</a><br><br>
+                </div>
+            </div>
+            <div class="times">
+                <p class="c-c">City Center</p>
+                <table class="times-table">
+
+                    <tr>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="95грн">10:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="95грн">11:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="95грн">12:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">13:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">14:40</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">15:40</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="125грн">16:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="165грн">17:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="165грн">18:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="190грн">19:40</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="190грн">20:10</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="215грн">21:10</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="215грн">22:20</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="215грн">23:30</a>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="tooltip" title="250грн">24:40</a>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+    </body>
+</html>

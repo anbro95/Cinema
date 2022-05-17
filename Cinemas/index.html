@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <title>Кінотеатри</title>
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body
+        style="background-color: #221F1F;">
+
+
+        <!-- Шапка -->
+        <div class="page-header">
+            <div class="left-block">
+                <img class="menu-left" onclick="mySecondFunction()" src="../img/menu.svg" alt="">
+
+                <div class="logo-container">
+                    <p class="title">Cinematic</p>
+                </div>
+            </div>
+
+            <div class="right-block">
+                <div id="1" class="cinema">
+                    <div class="cinema-name">
+                        <p>4 Matic Plaza, Одеса</p>
+                    </div>
+                    <div class="cinema-list" onclick="myFunction()"><img src="../img/arrow.svg" alt=""></div>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="#">4 Matic Plaza,Одеса</a>
+                        <a href="#">3 Matic Plaza,Одеса</a>
+                        <a href="#">2 Matic Plaza,Одеса</a>
+                    </div>
+                </div>
+
+                <div class="account">
+                    <div class="enter">
+                        <p>Увійти</p>
+                    </div>
+                    <div class="account-icon"><img src="../img/user.svg" alt=""></div>
+
+                </div>
+                <!-- <img class="end" src="img/menu.svg" alt=""> -->
+
+
+            </div>
+
+        </div>
+        <!--  -->
+
+        <!-- Меню -->
+        <div class="dropoverlay" onclick="deleteDropLeft()"></div>
+
+        <div class="dropleft">
+            <div class="dropleft-header">
+                <img onclick="deleteDropLeft()" src="../img/cancel.png" alt="">
+                <div class="languages">
+                    <p class="ru">RU</p>
+                    <p class="ua">UA</p>
+                </div>
+            </div>
+
+            <div class="dropleft-content">
+                <div class="logo">
+                    <img src="../img/logo.png" alt="">
+                </div>
+
+                <div class="inner-list">
+                    <a href="">Зараз у кіно</a>
+                    <a href="">Скоро у прокаті</a>
+                    <a href="" id="now">Кінотеатри</a>
+                    <a href="">Про компанію</a>
+                </div>
+
+                <div class="cabinet">
+                    <p>Особистий кабінет</p>
+                    <img src="../img/cabinet.svg" alt="">
+                </div>
+
+            </div>
+
+            <div class="dropleft-footer">
+                <p>Служба підтримки</p>
+                <div class="telephone">
+                    <img src="../img/phone.svg" alt="">
+                    <p>0 800 300 600</p>
+                </div>
+                <p>
+                    Ми в соціальних мережах</p>
+                <div class="networks">
+                    <img src="../img/facebook.svg" alt="">
+                    <img src="../img/viber.svg" alt="">
+                    <img src="../img/instagram.svg" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Конец меню -->
+
+        <a href="" class="big-logo">Cinematic</a>
+        <div id="city">
+            <a href="" class="city">Одеса</a>
+            <a href="" class="city">Київ</a>
+            <a href="" class="city">Харків</a>
+        </div>
+            <a href="" class="city" id="odesa">Одеса</a>
+            <a href="" class="city" id="kyiv">Київ</a>
+            <a href="" class="city" id="harkiv">Харків</a>
+        <div class="m">
+            <div class="matic">
+                <img src="../img/cinema.jpg" alt="cinema" width="366.96px" height="180px" class="image">
+                <p class="m4-1">4Matic Cinema</p>
+                <a href="" class="timetable">До розкладу</a>
+                <p class="street">вул. Дерібасівська, 1
+                    <br>
+                    0 700 300 400</p>
+                <p class="imax">3D IMAX 4DX ATMOS</p>
+
+            </div>
+            <div class="matic">
+                <img src="../img/cinema2.jpg" alt="cinema" width="366.96px" height="180px" class="image">
+                <p class="m4-1">3Matic Cinema</p>
+                <a href="" class="timetable">До розкладу</a>
+                <p class="street">вул. Дерібасівська, 2
+                    <br>
+                    0 700 300 200</p>
+                <p class="imax">3D IMAX 4DX ATMOS</p>
+            </div>
+            <div class="matic">
+                <img src="../img/cinema3.jpg" alt="cinema" width="366.96px" height="180px" class="image">
+                <p class="m4-1">2Matic Cinema</p>
+                <a href="" class="timetable">До розкладу</a>
+                <p class="street">вул. Дерібасівська, 3
+                    <br>
+                    0 700 300 100</p>
+                <p class="imax">3D IMAX 4DX ATMOS</p>
+            </div>
+        </div>
+
+    </body>
+</html>

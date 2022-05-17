@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Зоряні війни: Останні джедаї - про фільм</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="film.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+    
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="film.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <div class="page-header">
+        <div class="left-block">
+            <img class = "menu-left" onclick="mySecondFunction()" src="../img/menu.svg" alt="">
+         
+            <div class="logo-container">
+                <p class="title">Cinematic</p>  
+            </div>
+        </div>
+ 
+        <div class="right-block">
+            <div id="1" class="cinema">
+                <div class="cinema-name"><p>4 Matic Plaza, Одеса</p></div>
+            <div class="cinema-list" onclick="myFunction()"><img src="../img/arrow.svg" alt=""></div>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="#">4 Matic Plaza,Одеса</a>
+                <a href="#">3 Matic Plaza,Одеса</a>
+                <a href="#">2 Matic Plaza,Одеса</a>
+              </div>
+            </div>
+            
+            <div class="account">
+                <div class="enter"><p>Увійти</p></div>
+                <div class="account-icon"><img src="../img/user.svg" alt=""></div>
+                
+            </div>
+            <!-- <img class="end" src="img/menu.svg" alt=""> -->
+            
+            
+        </div>
+        
+    </div>
+<!--  -->
+
+<!-- Меню -->
+<div class="dropoverlay" onclick="deleteDropLeft()">
+    
+</div>
+
+<div class="dropleft">
+    <div class="dropleft-header">
+        <img onclick="deleteDropLeft()" src="../img/cancel.png"  alt="" >
+        <div class="languages">
+            <p class="ru">RU</p>
+            <p class="ua">UA</p>
+        </div>
+    </div>
+
+    <div class="dropleft-content">
+        <div class="logo">
+            <img src="../img/logo.png" alt="">
+        </div>
+
+        <div class="inner-list">
+            <a href="">Зараз у кіно</a>
+            <a href="">Скоро у прокаті</a>
+            <a href="">Кінотеатри</a>
+            <a href="">Про компанію</a>
+        </div>
+
+        <div class="cabinet">
+            <p>Особистий кабінет</p>
+            <img src="../img/cabinet.svg" alt="">
+        </div>
+
+    </div>
+
+    <div class="dropleft-footer">
+        <p>Служба підтримки</p>
+        <div class="telephone">
+            <img src="../img/phone.svg" alt="">
+            <p>0 800 300 600</p>
+        </div>
+        <p> Ми в соціальних мережах</p>
+        <div class="networks">
+            <img src="../img/facebook.svg" alt="">
+            <img src="../img/viber.svg" alt="">
+            <img src="../img/instagram.svg" alt="">
+        </div>
+        
+    </div>
+</div>
+
+   <!-- Конец меню -->
+
+
+    <p id="film-path">Cinematic > Фільми > Зоряні війни: Останні джедаї</p>
+    <p id="film-name">Зоряні війни: Останні джедаї</p>
+    <img src="../img/star.jpg" alt="poster" id="poster" width="275px" height="406px">
+    <a href="https://www.youtube.com/watch?v=SEGYUIDyV4o&ab_channel=B%26HFilmDistributionCompany" class="trailer">Дивитись трейлер</a>
+    <img src="../img/trailer.png" alt="" class="trailer-img" width="13px" height="17px">
+    
+       <!-- <div class="like-circle"><img src="../img/like.png" alt="like" class="like"></div> -->
+       <!-- <div class="dislike-circle"><img src="../img/dislike.png" alt="dislike" width="40px" height="40px" class="dislike"></div> -->
+       <img src="../img/like.png" alt="like" class="like">
+       <img src="../img/dislike.png" alt="" class="dislike">
+       <p class="like-num">97</p>
+       <p class="dislike-num">34</p>
+    
+    <table id="film-info">
+        <tr>
+            <td class="col1">Вік:</td>
+            <td class="col2">16 +</td>
+        </tr>
+        <tr>
+            <td class="col1">Рік:</td>
+            <td class="col2">2017</td>
+        </tr>
+      <tr>
+          <td class="col1">Оригінальна назва:</td>
+          <td class="col2">Star Wars: The Last Jedi</td>
+      </tr>
+      <tr>
+        <td class="col1">Режисер:</td>
+        <td class="col2">Раян Джонсон</td>
+    </tr>
+    <tr>
+        <td class="col1">Період прокату:</td>
+        <td class="col2">14.12.2017 - 17.01.2018</td>
+    </tr>
+    <tr>
+        <td class="col1">Рейтинг Imdb:</td>
+        <td class="col2">6.9</td>
+    </tr>
+    <tr>
+        <td class="col1">Мова:</td>
+        <td class="col2">Українська</td>
+    </tr>
+    <tr>
+        <td class="col1">Жанр:</td>
+        <td class="col2">Пригода, Екшн, Фантастика</td>
+    </tr>
+    <tr>
+        <td class="col1">Тривалість:</td>
+        <td class="col2">2:32</td>
+    </tr>
+    <tr>
+        <td class="col1">Виробництво:</td>
+        <td class="col2">США</td>
+    </tr>
+    <tr>
+        <td class="col1">Студія:</td>
+        <td class="col2">Lucasfilm</td>
+    </tr>
+    <tr>
+        <td class="col1">Сценарій:</td>
+        <td class="col2">Раян Джонсон</td>
+    </tr>
+    <tr>
+        <td class="col1">У головних ролях:</td>
+        <td class="col2">Марк Гемілл, Керрі Фішер</td>
+    </tr>
+    </table>
+
+    <p class="description">
+            Після знищення Верховним Порядком столиці Нової Республіки, застанута зненацька галактика дезорганізована. Опір, який очолює генерал Лея Органа, доводиться евакуювати з основної бази, коли до планети наближається флотилія «Зоряних руйнівників» Верховного Порядку. Намагаючись втекти, Опір вступає в бій з флотилією. Командор По Демерон здійснює зухвалу спробу знищити один із «Зоряних руйнівників», і флотилії Опору вдається увійти в гіперпростір. Спроба коштувала життя багатьом пілотам Опору, тому Лея занижує По у званні. Верховний лідер Верховного Порядку Сноук виносить генералу Гаксу жорстку догану за те, що він упустив флот Опору, але Гаксу вдається відстежити його з допомогою новітньої технології гіперпросторового трекінгу й атакувати його всіма наявними силами.
+    </p>
+
+
+    <div class="timetable">
+        <div class="timetable-1">
+            <p class="timetable-text">Розклад сеансів</p>
+            <!-- <div class="dropdown">
+                <button type="button" class="dropdown-button" data-toggle="dropdown">
+                  Пн, 11 жовтня         Сьогодні
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">12 жовтня</a>
+                  <a class="dropdown-item" href="#">13 жовтня</a>
+                  <a class="dropdown-item" href="#">14 жовтня</a>
+                </div>
+            </div> -->
+
+            <div class="time-drop" onclick="rotate()">
+                <p style="padding-top: 7px;">Пн, 11 жовтня</p> <img src="../img/arrow.svg" alt="arrow" height="20px" width="20px" class="time-arrow ">
+            </div>
+        <div class="dates">
+            <a href="#">Вт, 15 жовтня</a><br><br>
+            <a href="#">Ср, 16 жовтня</a><br><br>
+            <a href="#">Чт, 17 жовтня</a><br><br>
+            <a href="#">Пт, 18 жовтня</a><br><br>
+            <a href="#">Сб, 19 жовтня</a><br><br>
+        </div>
+        </div>
+            <div class="times">
+                <p class="c-c">City Center</p>
+                <table class="times-table">
+                        
+                    <tr>
+                        <td><a href="#" data-toggle="tooltip" title="95грн">10:20</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="95грн">11:20</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="95грн">12:30</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="125грн">13:30</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="125грн">14:40</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" data-toggle="tooltip" title="125грн">15:40</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="125грн">16:20</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="165грн">17:30</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="165грн">18:30</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="190грн">19:40</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" data-toggle="tooltip" title="190грн">20:10</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="215грн">21:10</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="215грн">22:20</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="215грн">23:30</a></td>
+                        <td><a href="#" data-toggle="tooltip" title="250грн">24:40</a></td>
+                        
+                    </tr>
+                </table>
+            </div>
+    </div>
+    
+
+
+
+
+
+
+
+   
+</body>
+</html>
